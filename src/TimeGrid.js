@@ -43,6 +43,7 @@ export default class TimeGrid extends Component {
     width: React.PropTypes.number,
 
     titleAccessor: accessor.isRequired,
+    typeAccessor:accessor.isRequired,
     allDayAccessor: accessor.isRequired,
     startAccessor: accessor.isRequired,
     endAccessor: accessor.isRequired,
@@ -265,6 +266,7 @@ export default class TimeGrid extends Component {
             eventComponent={this.props.components.event}
             eventWrapperComponent={this.props.components.eventWrapper}
             titleAccessor={this.props.titleAccessor}
+            typeAccessor={this.props.typeAccessor}
             startAccessor={this.props.startAccessor}
             endAccessor={this.props.endAccessor}
             allDayAccessor={this.props.allDayAccessor}
