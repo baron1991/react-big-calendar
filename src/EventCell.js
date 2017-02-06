@@ -15,7 +15,7 @@ let propTypes = {
   allDayAccessor: accessor,
   startAccessor: accessor,
   endAccessor: accessor,
-
+  typeAccessor:accessor,
   eventComponent: elementType,
   eventWrapperComponent: elementType.isRequired,
   onSelect: React.PropTypes.func
@@ -28,7 +28,7 @@ class EventCell extends React.Component {
       , event
       , selected
       , eventPropGetter
-      , startAccessor, endAccessor, titleAccessor
+      , startAccessor, endAccessor, titleAccessor,typeAccessor
       , slotStart
       , slotEnd
       , onSelect
