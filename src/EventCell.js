@@ -42,7 +42,8 @@ class EventCell extends React.Component {
       , isAllDay = get(event, props.allDayAccessor)
       , continuesPrior = dates.lt(start, slotStart, 'day')
       , continuesAfter = dates.gt(end, slotEnd, 'day')
-      , type = get(event, typeAccessor);
+      , type = get(event, "type");
+    console.log("type-->"+event);
     let  rbcEventType = `rbc-event-${type}`;
     if (eventPropGetter)
       var { style, className: xClassName } = eventPropGetter(event, start, end, selected);

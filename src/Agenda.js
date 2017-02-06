@@ -19,6 +19,7 @@ let Agenda = React.createClass({
     date: React.PropTypes.instanceOf(Date),
     length: React.PropTypes.number.isRequired,
     titleAccessor: accessor.isRequired,
+    typeAccessor: accessor.isRequired,
     allDayAccessor: accessor.isRequired,
     startAccessor: accessor.isRequired,
     endAccessor: accessor.isRequired,
@@ -133,7 +134,7 @@ let Agenda = React.createClass({
 
   timeRangeLabel(day, event){
     let {
-        endAccessor, startAccessor, allDayAccessor
+        endAccessor, startAccessor, allDayAccessor,typeAccessor
       , culture, messages, components } = this.props;
 
     let labelClass = ''
@@ -142,7 +143,7 @@ let Agenda = React.createClass({
 
     let start = get(event, startAccessor)
     let end = get(event, endAccessor)
-
+    let type = get(event,typeAccessor);
     if (!get(event, allDayAccessor)) {
       if (dates.eq(start, end, 'day')){
         label = localizer.format({ start, end }, this.props.agendaTimeRangeFormat, culture)
