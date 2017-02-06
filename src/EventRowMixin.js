@@ -19,7 +19,7 @@ export default {
     allDayAccessor: accessor,
     startAccessor: accessor,
     endAccessor: accessor,
-
+    typeAccessor:accessor,
     eventComponent: elementType,
     eventWrapperComponent: elementType.isRequired,
     onSelect: React.PropTypes.func
@@ -36,7 +36,7 @@ export default {
   renderEvent(event) {
     let {
         eventPropGetter, selected, start, end
-      , startAccessor, endAccessor, titleAccessor
+      , startAccessor, endAccessor, titleAccessor,typeAccessor
       , allDayAccessor, eventComponent
       , eventWrapperComponent
       , onSelect } = this.props;
@@ -51,6 +51,7 @@ export default {
         startAccessor={startAccessor}
         endAccessor={endAccessor}
         titleAccessor={titleAccessor}
+        typeAccessor={typeAccessor}
         allDayAccessor={allDayAccessor}
         slotStart={start}
         slotEnd={end}
